@@ -1,0 +1,6 @@
+tensorflow
+pillow
+scipy
+IPython
+opencv-python
+numpy
