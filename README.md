@@ -15,9 +15,9 @@ The train dataset contain 11024 Parasitized cell images and 11024 Uninfected cel
 The Test dataset contains 2756 Parasitized cell images and 2756 Uninfected cell images.
 
 # How to use
-Download the model json from ```model/malaria_recognizer.json``` and the weights files from  ```model/malaria_recognizer.h5```
+Download the model json from ```model/malaria_recognizer.json``` and the weights file from  ```model/malaria_recognizer.h5```
 
-This is a Keras Convulutional Neural Net model using Stochastic Gradient Descent and categorical crossentropy as the 
+This is a Keras Convolutional Neural Net model using Stochastic Gradient Descent and categorical crossentropy as the 
 loss function. You can import it into any python project as such:
 ```
 # Load the model from json file
@@ -30,5 +30,5 @@ model = model_from_json(loaded_model_json)
 model.load_weights(path_to_weights)
 
 # Compile the model
-model.compile(loss=loss, optimizer=optimizer, metrics=['accuracy'])
+model.compile(loss=keras.losses.categorical_crossentropy, optimizer='sgd', metrics=['accuracy'])
 ```
